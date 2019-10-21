@@ -3,6 +3,8 @@ import {createStore} from "redux";
 
 const initialState = {
     "todolists": []
+
+
 };
 
 const reducer = (state = initialState, action) => {
@@ -15,15 +17,12 @@ const reducer = (state = initialState, action) => {
             }
         }
 
-
-        //
         case "REMOVE-TODO": {
             return {
                 ...state,
-                todolists: [...state.todolists, action.removeToDoList]
+                todolists: [...state.todolists.filter((t) => t.id !== action.todolistId)]
             }
         }
-        //
 
         case "ADD-TASK": {
             return {
@@ -63,15 +62,14 @@ const reducer = (state = initialState, action) => {
             }
         }
 
-        //
         case "REMOVE-TASK": {
             return {
                 ...state,
-                todolists: state.todolists.map((todolist) => {
+                todolists: state.todolists.map(todolist => {
                     if (todolist.id === action.todolistId) {
                         return {
                             ...todolist,
-                            tasks: [...todolist.tasks, action.newTask]
+                            tasks: todolist.tasks.filter((t) => t.id !== action.taskId)
                         }
                     } else {
                         return todolist
@@ -79,7 +77,6 @@ const reducer = (state = initialState, action) => {
                 })
             }
         }
-        //
 
         default:
             return state

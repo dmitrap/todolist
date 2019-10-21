@@ -21,10 +21,14 @@ class App extends React.Component {
         this.nextTodoListId++;
     }
 
+    removeTodo = (todolistId) => {
+        this.props.removeTodolist (todolistId);
+    }
+
     render = () => {
         const todolists = this.props
             .todolists
-            .map(tl => <ConnectedTodoList id={tl.id} title={tl.title} tasks={tl.tasks}/>)
+            .map(tl => <ConnectedTodoList id={tl.id} title={tl.title} tasks={tl.tasks} removeTodo ={this.removeTodo}/>)
 
         return (
             <>
@@ -55,15 +59,13 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(action)
         },
 
-        //
-        removeTodo: (todoList) => {
+        removeTodolist: (todolistId) => {
             const action = {
                 type: "REMOVE-TODO",
-                todoList: todoList
+                todolistId: todolistId
             };
             dispatch(action)
         }
-        //
 
     }
 }

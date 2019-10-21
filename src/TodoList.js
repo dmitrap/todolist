@@ -14,12 +14,16 @@ class TodoList extends React.Component {
 
     }
 
-
     nextTaskId = 0;
 
     state = {
         filterValue: "All"
     };
+
+    saveState = () => {
+        let stateAsString = JSON.stringify(this.state);
+        localStorage.setItem("our-state" + this.props.id, stateAsString);
+    }
 
     addTask = (newText) => {
         let newTask = {
@@ -29,8 +33,9 @@ class TodoList extends React.Component {
             priority: "low"
         };
         this.nextTaskId++;
-        this.props.addTask(this.props.id, newTask)
+        this.props.addTask(this.props.id, newTask);
     }
+
 
     changeFilter = (newFilterValue) => {
         this.setState({
@@ -43,12 +48,16 @@ class TodoList extends React.Component {
     changeTask = (taskId, obj) => {
         this.props.changeTask(this.props.id, taskId, obj)
     }
+    removeTask = (taskId) => {
+        this.props.removeTask(this.props.id, taskId)
+    }
     changeStatus = (taskId, isDone) => {
         this.changeTask(taskId, {isDone: isDone});
     }
     changeTitle = (taskId, title) => {
         this.changeTask(taskId, {title: title});
     }
+
 
     render = () => {
 
@@ -57,11 +66,15 @@ class TodoList extends React.Component {
             <div className="todoList">
                 <div className="todoList-header">
                     <TodoListTitle title={this.props.title}/>
+                    <button onClick={() => {
+                        this.props.removeTodo(this.props.id)
+                    }}>X</button>
                     <AddNewItemForm addItem={this.addTask}/>
                 </div>
 
                 <TodoListTasks changeStatus={this.changeStatus}
                                changeTitle={this.changeTitle}
+                               removeTask={this.removeTask}
                                tasks={this.props.tasks.filter(t => {
                                    if (this.state.filterValue === "All") {
                                        return true;
@@ -101,16 +114,14 @@ const mapDispatchToProps = (dispatch) => {
             dispatch(action)
         },
 
-        //
-        removeTask: (todolistId, taskId, obj) => {
+        removeTask: (todolistId, taskId) => {
             const action = {
                 type: "REMOVE-TASK",
                 todolistId: todolistId,
                 taskId: taskId
             };
             dispatch(action)
-        }
-        //
+        },
 
     }
 }
