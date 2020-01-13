@@ -2,25 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c09b27-aaad-437d-8b9f-b74c895e4868" name="Default Changelist" comment="initial commit">
-      <change beforePath="$PROJECT_DIR$/../todolists/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todolists/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todolists/src/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/src/TodoList.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todolists/src/TodoListTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/src/TodoListTask.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todolists/src/TodoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/src/TodoListTasks.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../todolists/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/../todolists/src/store.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListFooter.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListFooter.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTasks.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListTasks.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../todolists" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1SVWUM6ZPVAuhMmMei4rozG62TO" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="js.last.introduce.type" value="LET" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/../todolists" />
@@ -29,15 +39,15 @@
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
+  <component name="ServiceViewManager">
+    <option name="viewStates">
       <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
       </list>
     </option>
   </component>
@@ -54,6 +64,7 @@
       <workItem from="1571325004450" duration="5786000" />
       <workItem from="1571331591744" duration="8554000" />
       <workItem from="1571649259281" duration="21530000" />
+      <workItem from="1578904784092" duration="392000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1571649458297</created>
