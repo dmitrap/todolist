@@ -1,33 +1,42 @@
-export const ADD_TODOLIST = "TodoList/reducer/ADD-TODOLIST";
-export const DELETE_TODOLIST = "TodoList/reducer/DELETE-TODOLIST";
-export const DELETE_TASK = "TodoList/reducer/DELETE-TASK";
-export const ADD_TASK = "TodoList/reducer/ADD-TASK";
-export const UPDATE_TASK = "TodoList/reducer/UPDATE-TASK";
+export const ADD_TODOLIST = "TodoList/Reducer/ADD-TODOLIST";
+export const DELETE_TODOLIST = "TodoList/Reducer/DELETE-TODOLIST";
+export const DELETE_TASK = "TodoList/Reducer/DELETE-TASK";
+export const ADD_TASK = "TodoList/Reducer/ADD-TASK";
+export const UPDATE_TASK = "TodoList/Reducer/UPDATE-TASK";
+export const SET_TODOLISTS = "TodoList/Reducer/SET-TODOLISTS";
+export const SET_TASKS = "TodoList/Reducer/SET-TASKS";
 
 const initialState = {
-    "todolists": [
-        {
-            "id": 0, "title": "every day",
-            tasks: [
-                {"title": "css11", "isDone": false, "priority": "low", "id": 0},
-                {"title": "js", "isDone": false, "priority": "low", "id": 1},
-                {"title": "react", "isDone": false, "priority": "low", "id": 2},
-                {"title": "sasasa", "isDone": false, "priority": "low", "id": 3},
-                {"title": "yoaa", "isDone": false, "priority": "low", "id": 4},
-                {"title": "sddsdsds", "isDone": false, "priority": "low", "id": 5}]
-        },
-        {"id": 1, "title": "tomorrow", tasks: []},
-        {"id": 2, "title": "weewwe`", tasks: []},
-        {"id": 3, "title": "dddd", tasks: []}
-    ]
+    "todolists": []
 }
 
-export const reducer = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
     switch (action.type) {
+        case SET_TASKS:
+            return {
+                ...state,
+                todolists: state.todolists.map(tl => {
+                    if (tl.id === action.todoId) {
+                        return {
+                            ...tl,
+                            tasks: action.tasks
+                        }
+                    } else {
+                        return tl
+                    }
+                })
+            }
+        case SET_TODOLISTS:
+            return {
+                ...state,
+                todolists: action.todolists.map((task) => {
+                    return {...task, tasks: []}
+                })
+            }
         case ADD_TODOLIST:
             return {
                 ...state,
-                todolists: [...state.todolists, action.newTodolist]
+                todolists: [action.newTodolist, ...state.todolists]
             }
         case DELETE_TODOLIST:
             return {
@@ -84,19 +93,58 @@ export const reducer = (state = initialState, action) => {
     return state;
 }
 
-export const addTaskAC = (newTask, todolistId) => {
-    return {type: ADD_TASK, newTask, todolistId};
-}
-
 export const updateTaskAC = (taskId, obj, todolistId) => {
-    return {type: UPDATE_TASK, taskId, obj, todolistId};
+    return {
+        type: UPDATE_TASK,
+        taskId,
+        obj,
+        todolistId
+    };
 }
 
 export const deleteTodolistAC = (todolistId) => {
-    return {type: DELETE_TODOLIST, todolistId};
-}
-export const deleteTaskAC = (taskId, todolistId) => {
-    return {type: DELETE_TASK, taskId, todolistId};
+    return {
+        type: DELETE_TODOLIST,
+        todolistId
+    };
 }
 
-export default reducer
+export const deleteTaskAC = (todolistId, taskId) => {
+    return {
+        type: DELETE_TASK,
+        todolistId,
+        taskId
+    };
+}
+
+export const addTaskAC = (newTask, todolistId) => {
+    return {
+        type: ADD_TASK,
+        newTask,
+        todolistId
+    };
+}
+export const setTodolistsAC = (todolists) => {
+    return {
+        type: SET_TODOLISTS,
+        todolists
+    };
+}
+
+export const setTasksAC = (tasks, todoId) => {
+    return {
+        type: SET_TASKS,
+        tasks,
+        todoId
+    };
+}
+
+
+export const addTodolistAC = (newTodolist) => {
+    return {
+        type: ADD_TODOLIST,
+        newTodolist
+    };
+}
+
+export default reducer;

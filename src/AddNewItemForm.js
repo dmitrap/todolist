@@ -15,7 +15,6 @@ class AddNewItemForm extends React.Component {
             this.setState({error: true});
         } else {
             this.setState({error: false});
-            // передаём новый текст наружу
             this.props.addItem(newText);
         }
     }
