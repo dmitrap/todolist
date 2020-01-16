@@ -2,7 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e5c09b27-aaad-437d-8b9f-b74c895e4868" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/api.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AddNewItemForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/AddNewItemForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoList.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTask.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListTask.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/TodoListTitle.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/TodoListTitle.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/reducer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/store.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,7 +37,7 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
+    <property name="settings.editor.selected.configurable" value="MTConfigurable" />
   </component>
   <component name="ServiceViewManager">
     <option name="viewStates">
@@ -56,7 +65,7 @@
       <workItem from="1571331591744" duration="8554000" />
       <workItem from="1571649259281" duration="21530000" />
       <workItem from="1578904784092" duration="995000" />
-      <workItem from="1578908301689" duration="594000" />
+      <workItem from="1578908301689" duration="999000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1571649458297</created>
@@ -86,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1578905564143</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="connected!">
+      <created>1579114170670</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1579114170670</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -95,16 +111,23 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
     <MESSAGE value="big update with some redux" />
-    <option name="LAST_COMMIT_MESSAGE" value="big update with some redux" />
+    <MESSAGE value="connected!" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected!" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="296" y="23" key="CommitChangelistDialog2" timestamp="1578905563961">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state x="283" y="23" key="CommitChangelistDialog2" timestamp="1579114170432">
+      <screen x="0" y="23" width="1440" height="817" />
     </state>
     <state x="296" y="23" key="CommitChangelistDialog2/0.23.1440.812@0.23.1440.812" timestamp="1578905563961" />
-    <state x="320" y="164" key="Vcs.Push.Dialog.v2" timestamp="1578905577752">
-      <screen x="0" y="23" width="1440" height="812" />
+    <state x="283" y="23" key="CommitChangelistDialog2/0.23.1440.817@0.23.1440.817" timestamp="1579114170432" />
+    <state x="221" y="67" key="SettingsEditor" timestamp="1579114174893">
+      <screen x="0" y="23" width="1440" height="817" />
+    </state>
+    <state x="221" y="67" key="SettingsEditor/0.23.1440.817@0.23.1440.817" timestamp="1579114174893" />
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2" timestamp="1579114185022">
+      <screen x="0" y="23" width="1440" height="817" />
     </state>
     <state x="320" y="164" key="Vcs.Push.Dialog.v2/0.23.1440.812@0.23.1440.812" timestamp="1578905577752" />
+    <state x="320" y="165" key="Vcs.Push.Dialog.v2/0.23.1440.817@0.23.1440.817" timestamp="1579114185022" />
   </component>
 </project>
